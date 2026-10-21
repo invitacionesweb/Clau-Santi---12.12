@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAU Y SANTI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <!-- Canción del prototipo: se mantiene -->
+    <div class="audiodiv">
+        <audio id="myAudio" preload="auto">
+            <source src="./loquierotodo.mp3" type="audio/mpeg">
+        </audio>
+        <div id="playPauseBtn" class="play">
+            <img src="./img/notamusical.png" alt="Icono de música">
+        </div>
+    </div>
+
+    <!-- Cuenta regresiva: en countdwon.js poner 12/12/2026 18:15 -->
+    <p data-aos="fade-up" class="titulocontador">Faltan:</p>
+    <div class="contador">
+        <div class="bloque">
+            <div data-aos="fade-up" id="dias" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">Días</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="horas" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">horas</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="minutos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">minutos</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="segundos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">segundos</div>
+        </div>
+    </div>
+
+    <div class="datos-ubicacion">
+        <div>
+            <!-- icono1 = la "lámpara": reemplazar la imagen si eligen otro dibujo -->
+            <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
+        </div>
+        <div class="datos">
+            <div>
+                <p data-aos="fade-up">Sábado 12 de diciembre <br> 18:15 Hs - Chacra San José</p>
+                <!-- PENDIENTE: reemplazar por el link exacto de Google Maps de la chacra -->
+                <a data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chacra+San+Jos%C3%A9">CÓMO LLEGAR</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="novios">
+        <img src="./img-editable/fotos1.png" alt="">
+        <div class="icono2">
+            <img data-aos="fade-down" src="./img-editable/icono2.png" alt="">
+        </div>
+        <div class="icono3">
+            <img data-aos="fade-up" src="./img-editable/icono3.png" alt="">
+        </div>
+    </div>
+
+    <div class="timeline">
+        <p class="timeline-title">El gran día...</p>
+        <div class="iconos">
+            <div class="iconos-block">
+                <!-- Corazones: reemplazar tulugar.png por el ícono de corazones -->
+                <img data-aos="fade-up" src="./img-editable/tulugar.png" alt="icono">
+                <p data-aos="fade-up">18:15 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Recepción</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/anillos.png" alt="icono">
+                <p data-aos="fade-up">18:45 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Ceremonia</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/copas.png" alt="icono">
+                <p data-aos="fade-up">19:30 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Aperitivo</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/cena.png" alt="icono">
+                <p data-aos="fade-up">21:30 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Cena</P>
+            </div>
+            <div class="iconos-block">
+                <!-- Bola de espejos: confirmar que fiesta.png sea la bola de espejos -->
+                <img data-aos="fade-up" src="./img-editable/fiesta.png" alt="icono">
+                <p data-aos="fade-up">22:00 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Fiesta</P>
+            </div>
+            <div class="iconos-block">
+                <!-- Auto: confirmar que vueltaacasa.png sea un auto -->
+                <img data-aos="fade-up" src="./img-editable/vueltaacasa.png" alt="icono">
+                <p data-aos="fade-up">03:30 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Vuelta a casa</P>
+            </div>
+        </div>
+    </div>
+
+    <div id="section2" class="accordion">
+        <h3 data-aos="fade-up">Antes de que nos consultes...</h3>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿CÓMO ME VISTO?</button>
+            <div class="accordion-content">
+                <p>QUEREMOS QUE TE SIENTAS CÓMODO/A Y CANCHERO/A, PERO TAMBIÉN QUE SE NOTE QUE ES UN DÍA ESPECIAL.
+                    📸 LAS FOTOS VAN A QUEDAR PARA SIEMPRE, ASÍ QUE: ELEGANTE Y CON ONDA, PERO SIN ESTRÉS.
+                    NO OLVIDES QUE EL BLANCO ES DE LA NOVIA.
+                </p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿QUÉ LES REGALO?</button>
+            <div class="accordion-content">
+                <p>EL MEJOR REGALO ES QUE ESTÉS CON NOSOTROS 💕
+                    PERO SI QUERÉS SUMAR UN MIMO A ESTA NUEVA ETAPA, PODRÍAS AYUDARNOS CON NUESTRA LUNA DE MIEL.
+                    HACÉ CLIC PARA COPIAR LOS DATOS DE NUESTRAS CUENTAS EN $ O USD.
+                </p>
+                <div class="gift-block">
+                    <!-- PENDIENTE: datos de las cuentas Itaú (una en $UY y otra en USD) -->
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="PENDIENTE - CUENTA ITAÚ $UY">CUENTA EN $</div>
+                    </div>
+                    <br>
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="PENDIENTE - CUENTA ITAÚ USD">CUENTA EN USD</div>
+                    </div>
+                    <br>
+                    <p>TITULAR DE LA CUENTA: PENDIENTE - BANCO ITAÚ</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿PUEDO LLEVAR A LOS PEQUES?</button>
+            <div class="accordion-content">
+                <p>AMAMOS A LOS NIÑOS… ¡PERO ESTA VEZ PLANEAMOS UNA CELEBRACIÓN PENSADA PARA ADULTOS!
+                    QUEREMOS QUE TODOS PUEDAN RELAJARSE, BRINDAR Y BAILAR SIN INTERRUPCIONES.
+                    GRACIAS POR ENTENDER 💖
+                </p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿DÓNDE ESTACIONO?</button>
+            <div class="accordion-content">
+                <p>¡SABEMOS QUE NO QUERÉS ANDAR DANDO VUELTAS!
+                    EN LA CHACRA HAY ESPACIO PARA ESTACIONAR CON COMODIDAD.
+                </p>
+            </div>
+        </div>
+
+        <!-- CONFIRMAR con los novios: estaba en el prototipo pero no la mencionaron -->
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿QUÉ PASA SI TENGO MÁS DUDAS?</button>
+            <div class="accordion-content">
+                <p>CREEMOS QUE TODAS TUS DUDAS ESTÁN RESUELTAS, PERO SI TENÉS MÁS CONSULTAS NO DUDES EN ESCRIBIRNOS A NOSOTROS HASTA 48 HS ANTES DEL EVENTO O A NUESTROS FAMILIARES MÁS CERCANOS DENTRO DE LAS 48 HS PREVIAS.
+                </p>
+            </div>
+        </div>
+
+        <div class="icono4">
+            <img data-aos="fade-down" src="./img-editable/icono4.png" alt="">
+        </div>
+        <div class="icono5">
+            <img data-aos="fade-up" src="./img-editable/icono5.png" alt="">
+        </div>
+    </div>
+
+    <div class="forms">
+
+        <!-- PENDIENTE: action con la URL del Apps Script de la planilla de Clau & Santi -->
+        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbwTkUyWWbNnS1ZqBiUrtQX4p0B3f6AeuXCzS-TSA9AhJjDWl_CsliNzTVWr6P34Y7k/exec" class="formulario" id="asistenciaForm">
+
+            <label class="formtitle">Sólo faltás vos, ¿Venís?</label>
+
+            <select name="ASISTENCIA" required>
+                <option value="" disabled selected>¿Asistís?</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <input type="text" name="NOMBRE" placeholder="Nombre" required />
+            <input type="text" name="APELLIDO" placeholder="Apellido" required />
+
+            <select name="DIETA" required>
+                <option value="" disabled selected>¿Alguna restricción alimentaria?</option>
+                <option value="Sin restricciones">Sin restricciones</option>
+                <option value="Vegetariano">Vegetariano</option>
+                <option value="Celíaco">Celíaco</option>
+            </select>
+
+            <textarea name="CANCION" placeholder="Recomendale una canción al DJ 🎶"></textarea>
+            <textarea name="MENSAJE" placeholder="Dejale un mensaje a los novios 🤍"></textarea>
+
+            <button type="submit" class="boton">ENVIAR</button>
+        </form>
+
+        <p data-aos="fade-up">RECORDÁ COMPLETAR UN FORMULARIO POR PERSONA. <br> HACELO ANTES DEL LUNES 30 DE NOVIEMBRE.</p>
+    </div>
+
+    <div class="novios">
+        <img src="./img-editable/fotos2.png" alt="">
+        <div class="icono6">
+            <img data-aos="fade-up" src="./img-editable/icono6.png" alt="">
+        </div>
+    </div>
+
+    <div class="end">
+        <img data-aos="fade-up" src="./img-editable/manosanillos.png" alt="">
+        <h2 data-aos="fade-up">Clau &amp; Santi</h2>
+        <p data-aos="fade-down">Te esperamos</p>
+    </div>
+
+    <footer>
+        <div class="contenido">
+            <div>
+                <img src="./img/logosiquiero.png" alt="icono si quiero">
+                <p>Hecho con &hearts; <br>
+                &#169; <b>Si,quiero!</b> - invitaciones inteligentes.
+                <br> Todos los derechos reservados.</p>
+            </div>
+            <div class="contenido-list">
+                <ul>
+                    <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                    <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./countdwon.js"></script>
+    <script src="./reproductor.js"></script>
+    <script src="./form.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+
+            // Reproduce el audio apenas la persona hace el primer scroll
+            var audio = document.getElementById('myAudio');
+            function playOnScroll() {
+                audio.play().catch(function (e) {
+                    console.warn('El navegador bloqueó la reproducción automática', e);
+                });
+                document.removeEventListener('scroll', playOnScroll);
+            }
+            document.addEventListener('scroll', playOnScroll);
+
+            // Acordeón de preguntas frecuentes (uno abierto a la vez)
+            var headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(function (header) {
+                header.addEventListener('click', function () {
+                    var item = header.parentElement;
+                    var yaEstabaActivo = item.classList.contains('active');
+                    headers.forEach(function (otroHeader) {
+                        otroHeader.parentElement.classList.remove('active');
+                    });
+                    if (!yaEstabaActivo) item.classList.add('active');
+                });
+            });
+
+            // Copiar datos de las cuentas al portapapeles
+            document.querySelectorAll('[data-copy]').forEach(function (el) {
+                el.addEventListener('click', function () {
+                    copiarAlPortapapeles(el.getAttribute('data-copy'));
+                });
+            });
+        });
+
+        function copiarAlPortapapeles(texto) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto)
+                    .then(function () { alert('Copiaste los datos de la cuenta a tu portapapeles'); })
+                    .catch(function () { copiarAlPortapapeleFallback(texto); });
+            } else {
+                copiarAlPortapapeleFallback(texto);
+            }
+        }
+
+        function copiarAlPortapapeleFallback(texto) {
+            var tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = texto;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copiaste los datos de la cuenta a tu portapapeles');
+        }
+    </script>
+
+</body>
+</html>
